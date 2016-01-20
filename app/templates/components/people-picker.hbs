@@ -1,0 +1,10 @@
+<li class="peopleCard {{person.isSelected}}" {{action 'select' person}}>
+     <img src="{{person.avatar}}"/>
+     <span>{{person.name}}</span>
+     <span>{{person.title}}</span>
+     <ul>
+       {{#each person.tags as |tag|}}
+        <li>{{tag}}</li>
+       {{/each}}
+     </ul>
+</li>

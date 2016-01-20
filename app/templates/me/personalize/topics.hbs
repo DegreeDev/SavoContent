@@ -1,0 +1,37 @@
+<h4>Which industries do you want to follow?</h4>
+<div class="topic-list industries">
+	{{#each model.industries as |item|}}
+		{{topic-picker
+			name=item.name
+			isFollowing=item.isFollowing
+			follow='follow'
+			unfollow='unfollow' }}
+	{{/each}}
+</div>
+
+<h4>Which products do you want to follow</h4>
+<div class="topic-list products">
+	{{#each model.products as |item|}}
+	{{topic-picker
+		name=item.name
+		isFollowing=item.isFollowing
+		follow='follow'
+		unfollow='unfollow' }}
+	{{/each}}
+</div>
+
+<h4>Which topics do you want to follow</h4>
+<div class="topic-list topics">
+	{{#each model.topics as | item |}}
+	{{topic-picker
+		name=item.name
+		isFollowing=item.isFollowing
+		follow='follow'
+		unfollow='unfollow' }}
+	{{/each}}
+</div>
+
+<div>
+	{{#link-to 'me.personalize' class='btn'}}Back{{/link-to}}
+	{{#link-to 'me.personalize.people' class='btn btn-primary' id='next-button'}}Next{{/link-to}}
+</div>

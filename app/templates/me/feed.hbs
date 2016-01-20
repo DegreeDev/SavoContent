@@ -1,0 +1,12 @@
+{{outlet}}
+
+<h3>FEED</h3>
+
+<ul id="feedContainer">
+{{#each model as |item|}}
+  <li class="feedItem {{item.class}}">
+    <img src="{{item.icon}}"/>
+    <span>{{item.text}}</span>
+  </li>
+{{/each}}
+</ul>

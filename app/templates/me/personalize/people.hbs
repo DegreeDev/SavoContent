@@ -1,0 +1,12 @@
+<h4>People</h4>
+
+<span class="instructionalText">Who do you want to follow?</span>
+
+<ul class="peopleContainer">
+  {{#each model as |person| }}
+    {{people-picker person=person select='followPerson'}}
+  {{/each}}
+</ul>
+
+{{#link-to 'me.personalize.topics' class='btn'}}Back{{/link-to}}
+{{#link-to 'me.feed' class='btn btn-primary'}}Finish{{/link-to}}
